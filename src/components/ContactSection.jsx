@@ -9,7 +9,7 @@ const ContactSection = () => {
   const whatsappLink = `https://wa.me/${phoneNumber.replace(/\+/g, "")}`;
 
   return (
-    <section id="contact" className="py-12 px-4 bg-gray-100">
+    <section id="contact" className="py-12 px-4 bg-gray-100 text-black">
       <div className="container mx-auto">
         <h2 className="text-4xl font-bold mb-8 text-center text-gray-800">
           Get in Touch

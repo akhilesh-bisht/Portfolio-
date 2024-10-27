@@ -10,19 +10,25 @@ How to Use
 Technologies Used
 Live Preview
 Contact
-About Me
+
+#About Me
+
 I am Akhilesh Bisht, a Full Stack Developer with experience in building scalable web applications using the MERN stack. I enjoy tackling challenges in both frontend and backend development. This portfolio highlights my skills and the projects I’ve worked on.
 
-Skills
+#Skills
+
 Frontend: HTML5, CSS3, JavaScript, React, Tailwind CSS, Bootstrap
 Backend: Node.js, Express.js, MongoDB, REST APIs
 Tools: Git, GitHub, VS Code, Postman, Figma
 Other: Responsive Design, Accessibility, Agile Methodologies
-Projects
+
+#Projects
+
 Food Point
 A React-based food delivery app with Redux integration. Features include filtering meals by type, adding items to the cart, and responsive design.
 
-Tech Stack: React, Redux, Tailwind CSS, React Router
+#Tech Stack: React, Redux, Tailwind CSS, React Router
+
 GitHub Repo
 Joke Teller Web App
 A fun app that displays random jokes in English and Hindi, complete with emojis and ratings.

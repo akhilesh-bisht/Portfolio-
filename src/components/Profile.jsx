@@ -1,10 +1,17 @@
 import MyImg from "../assets/myimg.jpg";
-
+import bG from "../assets/cover.jpeg";
 const Profile = () => {
   return (
     <div
-      className="text-gray-100 pt-6 mt-4 rounded-lg shadow-md"
-      style={{ background: "linear-gradient(29deg, #667F2B, #764CAA)" }}
+      className="text-gray-100 pt-6 mt-4 rounded-lg shadow-md "
+      style={{
+        backgroundImage: `url(${bG})`, // Correct way to set the background image
+        backgroundSize: "cover", // Optional: to cover the entire div
+        backgroundPosition: "center",
+        opacity: "0.9", // Optional: to center the image
+      }}
+
+      // style={{ background: "linear-gradient(29deg, #667F2B, #764CAA)" }}
     >
       <div className="flex flex-col sm:flex-row items-center sm:space-x-4 space-y-4 sm:space-y-0 p-4">
         <img

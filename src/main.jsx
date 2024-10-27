@@ -12,7 +12,7 @@ import Projects from "./components/Projects.jsx";
 import Skill from "./components/Skill.jsx";
 import Experience from "./components/Experience.jsx";
 import About from "./components/About.jsx";
-import Git, { gitloder } from "./components/Git.jsx";
+
 import ContactSection from "./components/ContactSection.jsx";
 
 const router = createBrowserRouter(
@@ -23,7 +23,6 @@ const router = createBrowserRouter(
       <Route path="project" element={<Projects />} />
       <Route path="about" element={<About />} />
       <Route path="contact" element={<ContactSection />} />
-      <Route path="git" element={<Git />} loader={gitloder} />
     </Route>
   )
 );

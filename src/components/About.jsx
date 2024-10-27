@@ -34,11 +34,11 @@ function About() {
             </div>
             <p className="text-gray-700">
               I am currently enrolled at Bhakht Darshan PG University, where I
-              am pursuing my Bachelor of Science degree. My academic pursuits
-              have exposed me to a diverse range of subjects, providing me with
-              a well-rounded foundation in various fields. The interdisciplinary
-              nature of my studies has allowed me to develop critical thinking
-              and problem-solving skills.
+              am pursuing my Bachelor of computer (IT) degree. My academic
+              pursuits have exposed me to a diverse range of subjects, providing
+              me with a well-rounded foundation in various fields. The
+              interdisciplinary nature of my studies has allowed me to develop
+              critical thinking and problem-solving skills.
             </p>
           </div>
 

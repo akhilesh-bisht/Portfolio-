@@ -6,10 +6,13 @@ import {
   FaYoutube,
   FaGithub,
   FaLinkedin,
-  FaInstagram,
   FaBars,
   FaTimes,
 } from "react-icons/fa";
+import { FcContacts, FcAbout } from "react-icons/fc";
+import { FaSquareXTwitter } from "react-icons/fa6";
+import { GiSkills } from "react-icons/gi";
+import { AiFillProject } from "react-icons/ai";
 import { NavLink } from "react-router-dom";
 
 const Sidebar = () => {
@@ -57,7 +60,7 @@ const Sidebar = () => {
                 }
                 onClick={HandleToggle}
               >
-                <FaHome />
+                <FaHome className="text-orange-500" />
                 <span>Home</span>
               </NavLink>
             </li>
@@ -71,7 +74,7 @@ const Sidebar = () => {
                 }
                 onClick={HandleToggle}
               >
-                <FaHashtag />
+                <GiSkills className="text-black" />
                 <span>Skill</span>
               </NavLink>
             </li>
@@ -85,7 +88,7 @@ const Sidebar = () => {
                 }
                 onClick={HandleToggle}
               >
-                <FaClipboardList />
+                <AiFillProject />
                 <span>Projects</span>
               </NavLink>
             </li>
@@ -99,7 +102,7 @@ const Sidebar = () => {
                 }
                 onClick={HandleToggle}
               >
-                <FaYoutube />
+                <FcAbout />
                 <span>About</span>
               </NavLink>
             </li>
@@ -118,13 +121,13 @@ const Sidebar = () => {
                 }
                 onClick={HandleToggle}
               >
-                <FaInstagram />
+                <FcContacts className="text-blue-500" />
                 <span>Contact Me</span>
               </NavLink>
             </li>
             <li className="flex items-center space-x-2">
               <NavLink
-                to="/git"
+                to="https://github.com/akhilesh-bisht"
                 className={({ isActive }) =>
                   `flex items-center justify-start gap-3 text-xl ${
                     isActive ? "text-orange-600" : "text-white"
@@ -132,12 +135,12 @@ const Sidebar = () => {
                 }
                 onClick={HandleToggle}
               >
-                <FaGithub />
+                <FaGithub className="text-black" />
                 <span>Github</span>
               </NavLink>
             </li>
             <li className="flex items-center space-x-2">
-              <FaYoutube />
+              <FaSquareXTwitter />
               <span>Twiter</span>
             </li>
             <li className="flex items-center space-x-2">
@@ -145,7 +148,7 @@ const Sidebar = () => {
                 to="https://www.linkedin.com/in/akhilesh-bisht-a76981291/"
                 className="items-center flex justify-start gap-3 text-xl"
               >
-                <FaLinkedin />
+                <FaLinkedin className="text-green-500" />
                 <span>LinkedIn</span>
               </NavLink>
             </li>
