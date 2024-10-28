@@ -17,8 +17,7 @@ function Skill() {
   return (
     <section className="py-10 bg-gray-50" id="technologies">
       <div className="container mx-auto px-6">
-        {/* Skill Icons */}
-        <div className="mt-12 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8 justify-center items-center">
+        <div className="mt-12 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 justify-center items-center">
           {[
             html,
             css,
@@ -28,8 +27,8 @@ function Skill() {
             redux,
             git,
             bootstrap,
-            express,
             nodejs,
+            express,
             mongo,
             graphql,
             restApi,
@@ -38,7 +37,7 @@ function Skill() {
               key={index}
               src={src}
               alt={`Skill-${index}`}
-              className="w-16 h-16 mx-auto transition transform hover:scale-110 rounded-lg shadow-lg"
+              className=" mx-auto aspect-[3/2] w-32   transition transform hover:scale-110 rounded-lg shadow-lg object-contain"
             />
           ))}
         </div>
