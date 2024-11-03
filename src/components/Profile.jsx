@@ -1,4 +1,4 @@
-import MyImg from "../assets/myimg.jpg";
+import MyImg from "../assets/dp.jpg";
 import bG from "../assets/cover.jpeg";
 const Profile = () => {
   return (
