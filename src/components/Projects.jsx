@@ -7,9 +7,16 @@ import music from "../assets/music.png";
 import dice from "../assets/dice.png";
 import BgRemover from "../assets/bgRemover.png";
 import foodPoint from "../assets/food-point.png";
+import job from "../assets/job-Finder.png";
 import { Link } from "react-router-dom";
 
 const projects = [
+  {
+    title: "Job -Finder",
+    description: "React + Tailwind css + react-router + redux-toolkit",
+    image: job,
+    href: "https://job-finder-kohl.vercel.app/find-jobs",
+  },
   {
     title: "Food-Point",
     description: "React + Tailwind css + react-router + redux-toolkit",

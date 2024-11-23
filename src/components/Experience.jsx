@@ -7,7 +7,7 @@ const experiences = [
     duration: "July 2024 - Present",
     description:
       "Worked on building serverless tools using react.js and Mantine UI framework.",
-    skills: ["React.js", "Mantine", "Node.js", "MongoDB", "Express.js"],
+    skills: ["React.js", "Mantine", "Node.js"],
   },
 
   {

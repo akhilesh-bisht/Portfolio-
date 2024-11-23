@@ -29,8 +29,8 @@ function Skill() {
             bootstrap,
             nodejs,
             express,
-            mongo,
-            graphql,
+            // mongo,
+            // graphql,
             restApi,
           ].map((src, index) => (
             <img

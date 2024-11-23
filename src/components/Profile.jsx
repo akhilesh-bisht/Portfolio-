@@ -24,7 +24,6 @@ const Profile = () => {
           <h2 className="text-2xl sm:text-3xl font-bold">Akhilesh Bisht</h2>
           <p className="text-sm sm:text-base font-medium mt-1">
             Full Stack Developer || Frontend Developer || Backend Developer ||
-            App Developer
           </p>
         </div>
 
