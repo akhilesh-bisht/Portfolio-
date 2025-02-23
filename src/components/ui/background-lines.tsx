@@ -16,10 +16,7 @@ export const BackgroundLines = ({
 }) => {
   return (
     <div
-      className={cn(
-        "h-[20rem] md:h-screen w-full bg-white dark:bg-black",
-        className
-      )}
+      className={cn("h-[20rem]  w-full md:h-screen  dark:bg-black", className)}
     >
       <SVG svgOptions={svgOptions} />
       {children}
@@ -98,7 +95,7 @@ const SVG = ({
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
-      className="absolute inset-0 w-full h-full"
+      className="absolute inset-0 w-[80%] mx-auto h-full text-white"
     >
       {paths.map((path, idx) => (
         <motion.path

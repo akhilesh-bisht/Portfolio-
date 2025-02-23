@@ -9,7 +9,7 @@ const ProfilePicture: React.FC = () => {
     >
       <img
         className={
-          " w-40 h-40 md:w-full md:h-full border border-black rounded-full animate-grow"
+          "w-28 h-28 md:w-60 md:h-60 border border-black rounded-full animate-grow"
         }
         src={profilePicture}
       />

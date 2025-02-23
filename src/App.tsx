@@ -2,9 +2,10 @@ import "./App.css";
 import ProfilePicture from "components/profilePicture/profilePicture";
 import NameTitleContainer from "components/nameTitleContainer/nameTitleContainer";
 import SkillContainer from "components/skillContainer/skillContainer";
-import ProjectContainer from "./components/projectContainer/projectContainer";
+// import ProjectContainer from "./components/projectContainer/projectContainer";
 import ResumeContainer from "./components/resumeContainer/resumeContainer";
-import { BackgroundLines } from "./components/ui/background-lines"; // Import the BackgroundLinesDemo component
+import { BackgroundLines } from "./components/ui/background-lines";
+import Experience from "./components/Experience/ExperienceSection";
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
         {/* Your Existing Content */}
         <div
           className={
-            "flex flex-col justify-evenly items-center h-11/12 w-full gap-4 md:gap-8   p-0"
+            "flex flex-col justify-evenly items-center h-11/12 w-full gap-4 md:gap-8    p-0"
           }
         >
           <div
@@ -38,9 +39,17 @@ function App() {
               "w-full md:w-3/4 flex flex-col items-center md:items-start"
             }
           >
+            <div>Experience</div>
+            <Experience />
+          </div>
+          {/* <div
+            className={
+              "w-full md:w-3/4 flex flex-col items-center md:items-start"
+            }
+          >
             <div>Projects</div>
             <ProjectContainer />
-          </div>
+          </div> */}
         </div>
       </BackgroundLines>
     </>

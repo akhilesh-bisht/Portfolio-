@@ -24,7 +24,7 @@ export const iconDictionary: ISocialLink[] = [
     logo: <IoLogoGithub size="2em" />,
     link: "https://github.com/akhilesh-bisht/",
     iconColor: "#a6e3a1",
-    position: { top: "5%", right: "82%" },
+    position: { top: "5%", right: "80%" },
   },
 ];
 
