@@ -1,7 +1,7 @@
 import gsap from "gsap";
 import { useEffect, useRef } from "react";
 import { TiDocumentText } from "react-icons/ti";
-import { SiOpenproject } from "react-icons/si";
+// import { SiOpenproject } from "react-icons/si";
 import resume from "../../assets/akhilesh_frontend.pdf";
 import { FaDownload } from "react-icons/fa6";
 
