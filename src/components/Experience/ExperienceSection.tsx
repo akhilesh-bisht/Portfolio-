@@ -63,8 +63,8 @@ const experiences = [
 const ExperienceSection: React.FC = () => {
   return (
     <div className="w-full flex flex-col items-center justify-center text-center md:text-left">
-      <h2 className="text-3xl font-bold mb-8 text-white">Experience</h2>
-      <div className="w-full max-w-4xl px-4 md:px-0 space-y-8">
+      {/* <h2 className="text-3xl font-bold mb-8 text-white">Experience</h2> */}
+      <div className="w-full max-w-4xl mt-4 px-4 md:px-0 space-y-8">
         {experiences.map((exp, index) => (
           <Experience key={index} experience={exp} />
         ))}

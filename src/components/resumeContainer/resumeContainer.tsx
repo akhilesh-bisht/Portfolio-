@@ -3,6 +3,7 @@ import { useEffect, useRef } from "react";
 import { TiDocumentText } from "react-icons/ti";
 import { SiOpenproject } from "react-icons/si";
 import resume from "../../assets/akhilesh_frontend.pdf";
+import { FaDownload } from "react-icons/fa6";
 
 const ResumeContainer: React.FC = () => {
   const tl = useRef<GSAPTimeline>();
@@ -19,16 +20,16 @@ const ResumeContainer: React.FC = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center space-y-6 mt-6">
+    <div className="flex justify-center items-baseline gap-6 md:gap-2 md:flex-col md:items-center space-y-6 mt-6 text-xs lg:text-base">
       {/* View Resume */}
-      <div className="resumeContainer scale-125 opacity-0">
+      <div className="resumeContainer scale-125 opacity-0 flex justify-center">
         <a
           href={resume}
           target="_blank"
           className="text-blue-400 flex flex-col items-center justify-center hover:text-blue-500 transition duration-200"
         >
           <TiDocumentText size="2.5em" />
-          View Resume
+          Resume
         </a>
       </div>
 
@@ -37,10 +38,9 @@ const ResumeContainer: React.FC = () => {
         <a
           href={resume}
           download="Akhilesh_Frontend_Resume.pdf"
-          className="bg-blue-500 text-white px-6 py-3 rounded-lg shadow-md flex items-center gap-2 text-lg font-semibold hover:bg-blue-600 transition duration-300"
+          className="bg-green-500 text-white px-4 py-3 rounded-lg shadow-md flex items-center gap-2 text-lg font-semibold hover:bg-green-600 transition duration-300"
         >
-          <TiDocumentText size="1.8em" />
-          Download Resume
+          <FaDownload />
         </a>
       </div>
 

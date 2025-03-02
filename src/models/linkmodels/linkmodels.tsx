@@ -8,7 +8,7 @@ export const iconDictionary: ISocialLink[] = [
     logo: <IoMail size="2em" />,
     link: "mailto:akhileshbisht2020@gmail.com.com",
     iconColor: "#74c7ec",
-    position: { top: "5%", right: "80%" },
+    position: { top: "5%", right: "78%" },
   },
   {
     id: 1,
@@ -16,7 +16,7 @@ export const iconDictionary: ISocialLink[] = [
     logo: <IoLogoLinkedin size="2em" />,
     link: "https://www.linkedin.com/in/akhilesh-bisht-a76981291/",
     iconColor: "#f38ba8",
-    position: { top: "5%", right: "80%" },
+    position: { top: "7%", right: "82%" },
   },
   {
     id: 2,
@@ -24,7 +24,7 @@ export const iconDictionary: ISocialLink[] = [
     logo: <IoLogoGithub size="2em" />,
     link: "https://github.com/akhilesh-bisht/",
     iconColor: "#a6e3a1",
-    position: { top: "5%", right: "80%" },
+    position: { top: "7%", right: "84%" },
   },
 ];
 
