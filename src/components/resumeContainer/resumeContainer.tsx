@@ -45,7 +45,7 @@ const ResumeContainer: React.FC = () => {
       </div>
 
       {/* Projects */}
-      <div className="resumeContainer scale-125 opacity-0">
+      {/* <div className="resumeContainer scale-125 opacity-0">
         <a
           href="/projects"
           className="text-blue-400 flex flex-col items-center justify-center hover:text-blue-500 transition duration-200"
@@ -53,7 +53,7 @@ const ResumeContainer: React.FC = () => {
           <SiOpenproject size="2.5em" />
           Projects
         </a>
-      </div>
+      </div> */}
     </div>
   );
 };
