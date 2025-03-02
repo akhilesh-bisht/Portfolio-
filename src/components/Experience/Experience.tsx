@@ -53,16 +53,19 @@ const Experience: React.FC<ExperienceProps> = ({ experience }) => {
   }, [isOpen]);
 
   return (
-    <div className="relative pl-10 border-l-4 border-blue-500">
+    <div className="relative pl-10 border-l-4 border-blue-500 mx-auto">
+      {/* Timeline Dot */}
       <div
         ref={dotRef}
-        className="absolute left-0 top-3 w-4 h-4 bg-blue-500 border-4 border-[#242424] rounded-full shadow-md transform -translate-x-1/2"
+        className="absolute left-0 top-6 w-4 h-4 bg-blue-500 border-4 border-[#1e1e1e] rounded-full shadow-md transform -translate-x-1/2"
       />
 
+      {/* Experience Card */}
       <div
         ref={cardRef}
-        className="bg-[#242424] shadow-xl rounded-lg p-6 mb-6 border border-gray-700 transition-all hover:shadow-2xl"
+        className="bg-[#1e1e1e] shadow-lg rounded-lg p-6 mb-6 border border-gray-700 transition-all hover:shadow-2xl"
       >
+        {/* Header Section */}
         <div
           className="flex justify-between items-center cursor-pointer p-2 rounded-lg hover:bg-gray-800 transition"
           onClick={() => setIsOpen(!isOpen)}
@@ -72,15 +75,18 @@ const Experience: React.FC<ExperienceProps> = ({ experience }) => {
               {experience.role}
               <span className="text-blue-400"> @ {experience.company}</span>
             </h3>
-            <p className="text-sm text-gray-300 mt-1">{experience.duration}</p>
           </div>
-          <ChevronDown
-            className={`text-gray-400 transition-transform ${
-              isOpen ? "rotate-180" : ""
-            }`}
-          />
+          <div className="flex items-center space-x-2">
+            <p className="text-sm text-gray-400">{experience.duration}</p>
+            <ChevronDown
+              className={`text-gray-400 transition-transform ${
+                isOpen ? "rotate-180" : ""
+              }`}
+            />
+          </div>
         </div>
 
+        {/* Collapsible Content */}
         <div
           ref={contentRef}
           className="overflow-hidden h-0 transition-all duration-300"
@@ -96,6 +102,7 @@ const Experience: React.FC<ExperienceProps> = ({ experience }) => {
             ))}
           </ul>
 
+          {/* Skills Section */}
           {experience.skills && (
             <div className="mt-6 pt-4 border-t border-gray-700">
               <h4 className="text-sm font-semibold text-gray-400 mb-3">
@@ -105,7 +112,7 @@ const Experience: React.FC<ExperienceProps> = ({ experience }) => {
                 {experience.skills.map((skill, index) => (
                   <div
                     key={index}
-                    className="flex items-center px-3 py-1 rounded-full text-sm shadow-md hover:bg-gray-600 transition"
+                    className="flex items-center px-3 py-1 rounded-full bg-gray-700 text-white text-sm shadow-md hover:bg-gray-600 transition"
                   >
                     {skill.icon}
                     <span className="ml-2">{skill.name}</span>
