@@ -5,7 +5,7 @@ import { FaReact, FaNodeJs, FaCss3Alt, FaFigma } from "react-icons/fa"; // Examp
 const experiences: Experience[] = [
   {
     company: "KisanCash",
-    role: "Software Developer Intern",
+    role: "SDE - Frontend ",
     duration: "January 2025 - Present",
     description: [
       "Developed and maintained features for a fintech platform aimed at providing financial solutions to farmers.",
