@@ -5,7 +5,7 @@ import { FaReact, FaNodeJs, FaCss3Alt, FaFigma, FaJs } from "react-icons/fa"; //
 const experiences = [
   {
     company: "KisanCash",
-    role: "SDE - Frontend",
+    role: "Frontend Developer",
     duration: "Jan 2025 - Present",
     description: [
       "Developed and maintained features for a fintech platform aimed at providing financial solutions to farmers.",
