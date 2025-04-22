@@ -30,7 +30,7 @@ export const projectArray = [
     description:
       "A blog style website where I can post articles and tutorials for the VR game Resonite",
     // logo: resoniteshrinelogo,
-    skills: ["Javascript", "React", "Tailwind", "Typescript", "Django"],
+    skills: ["Javascript", "React", "Tailwind css", "Typescript", "Django"],
     link: "https://github.com/akhilesh-bisht/Full-stack-Chat-app",
   },
   {
