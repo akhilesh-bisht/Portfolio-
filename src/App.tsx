@@ -2,11 +2,11 @@ import "./App.css";
 import ProfilePicture from "components/profilePicture/profilePicture";
 import NameTitleContainer from "components/nameTitleContainer/nameTitleContainer";
 import SkillContainer from "components/skillContainer/skillContainer";
-// import Project from "./components/project/project";
+import Project from "./components/project/project";
 import ResumeContainer from "./components/resumeContainer/resumeContainer";
 import { BackgroundLines } from "./components/ui/background-lines";
 import Experience from "./components/Experience/ExperienceSection";
-// import { projectArray } from "./models/projectModels/projectModel";
+import { projectArray } from "./models/projectModels/projectModel";
 
 function App() {
   return (
@@ -49,9 +49,9 @@ function App() {
             }
           >
             <div>Projects</div>
-            {/* {projectArray.map((project) => (
+            {projectArray.map((project) => (
               <Project key={project.name} projectObject={project} />
-            ))} */}
+            ))}
           </div>
         </div>
       </BackgroundLines>
