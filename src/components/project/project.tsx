@@ -22,7 +22,7 @@ const Project: React.FC<ProjectProps> = ({ projectObject }) => {
   }, [projectObject.skills]);
 
   return (
-    <div className="flex md:flex-row flex-col justify-between items-center w-full border-t border-gray-700 border-b">
+    <div className="flex md:flex-row flex-col justify-between items-center  w-full border-t border-gray-700 border-b">
       <div className="w-3/4 md:w-1/3 p-1">
         <a
           href={projectObject.link}

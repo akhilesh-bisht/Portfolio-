@@ -1,6 +1,6 @@
 import React from "react";
 import Experience from "./Experience";
-import { FaReact, FaNodeJs, FaCss3Alt, FaFigma, FaJs } from "react-icons/fa"; // Added FaJs for JavaScript
+import { FaReact, FaNodeJs, FaCss3Alt, FaFigma, FaJs } from "react-icons/fa"; // Icons for skills
 
 const experiences = [
   {
@@ -62,8 +62,7 @@ const experiences = [
 
 const ExperienceSection: React.FC = () => {
   return (
-    <div className="w-full flex flex-col items-center justify-center text-center md:text-left">
-      {/* <h2 className="text-3xl font-bold mb-8 text-white">Experience</h2> */}
+    <div className="w-full flex flex-col items-center justify-center text-center md:text-left py-12">
       <div className="w-full max-w-4xl mt-4 px-4 md:px-0 space-y-8">
         {experiences.map((exp, index) => (
           <Experience key={index} experience={exp} />

@@ -1,10 +1,12 @@
-import React, { useRef, useEffect, useState } from "react";
-import gsap from "gsap";
-import { ChevronDown } from "lucide-react";
+import React, { useState } from "react";
+import { ChevronDown } from "lucide-react"; // To use a chevron down for collapsing/expanding
+import { FaReact, FaNodeJs, FaCss3Alt } from "react-icons/fa"; // Example icons for skills
 
 interface Skill {
   name: string;
-  icon: React.ReactNode;
+  logo: React.ReactNode;
+  mobileLogo: React.ReactNode;
+  color: string;
 }
 
 interface Experience {
@@ -12,118 +14,85 @@ interface Experience {
   role: string;
   duration: string;
   description: string[];
-  skills?: Skill[];
+  skills: Skill[];
 }
 
 interface ExperienceProps {
   experience: Experience;
+  width: number; // This is for checking the screen width for responsive icons
 }
 
-const Experience: React.FC<ExperienceProps> = ({ experience }) => {
-  const cardRef = useRef<HTMLDivElement>(null);
-  const dotRef = useRef<HTMLDivElement>(null);
-  const contentRef = useRef<HTMLDivElement>(null);
-  const [isOpen, setIsOpen] = useState(false);
-
-  useEffect(() => {
-    gsap.set([cardRef.current, dotRef.current], {
-      opacity: 0,
-      y: 50,
-    });
-
-    if (cardRef.current && dotRef.current) {
-      gsap.to([cardRef.current, dotRef.current], {
-        opacity: 1,
-        y: 0,
-        duration: 0.6,
-        ease: "power3.out",
-      });
-    }
-  }, []);
-
-  useEffect(() => {
-    if (contentRef.current) {
-      gsap.to(contentRef.current, {
-        height: isOpen ? "auto" : 0,
-        opacity: isOpen ? 1 : 0,
-        duration: 0.3,
-        ease: "power2.out",
-      });
-    }
-  }, [isOpen]);
+const Experience: React.FC<ExperienceProps> = ({ experience, width }) => {
+  const [isOpen, setIsOpen] = useState(false); // To handle expanding/collapsing the description
 
   return (
-    <div className="relative pl-6 md:pl-10 border-l-4 border-blue-500 mx-auto max-w-full md:max-w-2xl">
-      {/* Timeline Dot */}
-      <div
-        ref={dotRef}
-        className="absolute left-0 top-6 w-3 h-3 md:w-4 md:h-4 bg-blue-500 border-4 border-[#1e1e1e] rounded-full shadow-md transform -translate-x-1/2"
-      />
+    <div className="flex flex-col md:flex-row justify-between items-start w-full border-t border-gray-700 border-b py-6 px-4 space-y-6 md:space-y-0">
+      {/* Left Section: Company and Role */}
+      <div className="w-full md:w-1/3 p-2">
+        <div className="flex flex-col">
+          <h3 className="text-lg font-semibold text-white">
+            {experience.role}{" "}
+            <span className="text-blue-400">@ {experience.company}</span>
+          </h3>
+          <p className="text-sm text-gray-400">{experience.duration}</p>
+        </div>
+      </div>
 
-      {/* Experience Card */}
-      <div
-        ref={cardRef}
-        className="bg-[#1e1e1e] shadow-lg rounded-lg p-4 md:p-6 mb-6 border border-gray-700 transition-all hover:shadow-2xl"
-      >
-        {/* Header Section */}
+      {/* Right Section: Description and Skills */}
+      <div className="w-full md:w-2/3 flex flex-col items-start justify-start m-2">
+        {/* Description Toggle Button */}
         <div
-          className="flex flex-col md:flex-row justify-between items-start md:items-center cursor-pointer p-2 rounded-lg hover:bg-gray-800 transition"
+          className="cursor-pointer flex items-center text-gray-300 hover:text-white"
           onClick={() => setIsOpen(!isOpen)}
         >
-          <div>
-            <h3 className="text-lg md:text-xl font-bold text-white">
-              {experience.role}
-              <span className="text-blue-400"> @ {experience.company}</span>
-            </h3>
-          </div>
-          <div className="flex items-center space-x-2 mt-2 md:mt-0">
-            <p className="text-xs md:text-sm text-gray-400">
-              {experience.duration}
-            </p>
-            <ChevronDown
-              className={`text-gray-400 transition-transform ${
-                isOpen ? "rotate-180" : ""
-              }`}
-            />
-          </div>
+          <p className="mr-2 text-sm">Description</p>
+          <ChevronDown
+            className={`transition-transform cursor-pointer ${
+              isOpen ? "rotate-180" : ""
+            }`}
+            size={16}
+          />
         </div>
 
-        {/* Collapsible Content */}
+        {/* Collapsible Description */}
         <div
-          ref={contentRef}
-          className="overflow-hidden h-0 transition-all duration-300"
+          className={`mt-3 text-gray-300 list-disc list-inside space-y-2 text-sm transition-all duration-300 ease-in-out ${
+            isOpen
+              ? "max-h-screen opacity-100"
+              : "max-h-0 opacity-0 overflow-hidden"
+          }`}
         >
-          <ul className="space-y-2 md:space-y-3 text-gray-300 pt-3 md:pt-4 text-sm md:text-base">
-            {experience.description.map((point, index) => (
-              <li
-                key={index}
-                className="flex items-start before:content-['•'] before:text-blue-400 before:mr-2 md:before:mr-3"
-              >
-                {point}
-              </li>
-            ))}
-          </ul>
-
-          {/* Skills Section */}
-          {experience.skills && (
-            <div className="mt-4 md:mt-6 pt-3 md:pt-4 border-t border-gray-700">
-              <h4 className="text-xs md:text-sm font-semibold text-gray-400 mb-2 md:mb-3">
-                Skills:
-              </h4>
-              <div className="flex flex-wrap gap-2">
-                {experience.skills.map((skill, index) => (
-                  <div
-                    key={index}
-                    className="flex items-center px-2 md:px-3 py-1 rounded-full bg-gray-700 text-white text-xs md:text-sm shadow-md hover:bg-gray-600 transition"
-                  >
-                    {skill.icon}
-                    <span className="ml-1 md:ml-2">{skill.name}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
+          {isOpen && (
+            <ul className="space-y-2">
+              {experience.description.map(
+                (point, index) => (
+                  console.log(point), (<li key={index}>{point}</li>)
+                )
+              )}
+            </ul>
           )}
         </div>
+
+        {/* Skills Section */}
+        {experience.skills.length > 0 && (
+          <div className="mt-6 border-t border-gray-700 pt-4">
+            <h4 className="text-xs font-semibold text-gray-400 mb-2">
+              Skills:
+            </h4>
+            <div className="flex flex-wrap gap-4">
+              {experience.skills.map((skill, index) => (
+                <div
+                  key={index}
+                  className="flex items-center px-4 py-2 rounded-full bg-gray-700 text-white text-xs shadow-md hover:bg-gray-600 transition"
+                  style={{ color: skill.color }}
+                >
+                  {width > 800 ? skill.logo : skill.mobileLogo}
+                  <span className="ml-2">{skill.name}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
