@@ -5,40 +5,46 @@ import { skillArray } from "src/models/skillModels/skillmodel";
 
 const SkillContainer: React.FC = () => {
   const tl = useRef<GSAPTimeline>();
-  const width = useViewport();
+  const width = useViewport(); // assuming this returns a number
 
   useEffect(() => {
-    tl.current = gsap.timeline().to(`.skillContainer`, {
-      opacity: "100%",
+    tl.current = gsap.timeline().to(".skillCard", {
+      opacity: 1,
+      y: 0,
       scale: 1,
-      duration: 0.5,
-      delay: 0.18,
-      stagger: 0.1,
-      ease: "power3.in",
+      duration: 0.35,
+      stagger: 0.05,
+      ease: "power2.out",
     });
   }, []);
 
   return (
-    <>
-      <h1 className="text-lg font-bold md:hidden">Skills</h1>
-      <div className={"grid grid-cols-3 gap-2"}>
-        {skillArray.map((skill) => {
-          return (
-            <div
-              key={skill.name}
-              className={
-                "skillContainer aspect-square flex flex-col items-center opacity-0 scale-125"
-              }
-            >
-              <div style={{ color: skill.color }}>
-                {width.width > 800 ? skill.logo : skill.mobileLogo}
+    <div className="">
+      <h2 className="text-sm font-semibold text-white mb-4 tracking-wide">
+        Skills
+      </h2>
+
+      <div className="grid grid-cols-5 gap-2">
+        {skillArray.map((skill) => (
+          <div
+            key={skill.name}
+            className="skillCard opacity-0 translate-y-2 scale-90 flex flex-col items-center justify-center gap-2 bg-zinc-900/70 border border-zinc-700 rounded-[6px] p-[1.25rem] hover:scale-105 transition-all duration-200"
+          >
+            <div style={{ color: skill.color }}>
+              <div
+                className={`${width > 800 ? "text-[1.2rem]" : "text-[1rem]"}`}
+              >
+                {width > 800 ? skill.logo : skill.mobileLogo}
               </div>
-              <div>{skill.name}</div>
             </div>
-          );
-        })}
+            <p className="text-[0.75rem] text-gray-300 text-center font-light leading-tight truncate max-w-[45px]">
+              {skill.name}
+            </p>
+          </div>
+        ))}
       </div>
-    </>
+    </div>
   );
 };
+
 export default SkillContainer;

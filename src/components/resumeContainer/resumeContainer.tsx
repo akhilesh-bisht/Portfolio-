@@ -20,7 +20,7 @@ const ResumeContainer: React.FC = () => {
   }, []);
 
   return (
-    <div className="flex justify-center items-baseline gap-6 md:gap-2 md:flex-col md:items-center space-y-6 mt-6 text-xs lg:text-base">
+    <div className="flex justify-center items-baseline gap-6 md:gap-2  md:flex-col md:items-center space-y-6 mt-6 text-xs lg:text-base">
       {/* View Resume */}
       <div className="resumeContainer scale-125 opacity-0 flex justify-center">
         <a

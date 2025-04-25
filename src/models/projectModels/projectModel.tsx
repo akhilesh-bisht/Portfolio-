@@ -21,6 +21,22 @@ export const projectModelDefault = {
 
 export const projectArray = [
   {
+    name: "FarmStock – Inventory & Sales PWA for Agri Businesses",
+    description:
+      "A PWA for managing inventory, sales, credits, and purchases in agriculture. Includes invoice creation, alerts, analytics, and full API integration.",
+    logo: dashboard,
+    skills: [
+      "JavaScript",
+      "React.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Graph.js",
+      "Framer Motion",
+      "MySQL",
+    ],
+    link: "https://pos-frontend-black.vercel.app",
+  },
+  {
     name: "Email Sequence Sender – Visual Email Automation Tool",
     description:
       "A drag-and-drop tool to create and automate email flows. Built with React Flow, Agenda, and Node.js for managing visual workflows and scheduling emails.",
@@ -70,21 +86,5 @@ export const projectArray = [
       "Tailwind CSS",
     ],
     link: "https://github.com/akhilesh-bisht/Full-stack-Chat-app",
-  },
-  {
-    name: "FarmStock – Inventory & Sales PWA for Agri Businesses",
-    description:
-      "A PWA for managing inventory, sales, credits, and purchases in agriculture. Includes invoice creation, alerts, analytics, and full API integration.",
-    logo: dashboard,
-    skills: [
-      "JavaScript",
-      "React.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "Graph.js",
-      "Framer Motion",
-      "MySQL",
-    ],
-    link: "https://pos-frontend-black.vercel.app",
   },
 ];

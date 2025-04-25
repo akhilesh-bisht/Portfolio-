@@ -11,9 +11,7 @@ import { projectArray } from "./models/projectModels/projectModel";
 function App() {
   return (
     <>
-      {/* BackgroundLinesDemo Component */}
       <BackgroundLines>
-        {/* Your Existing Content */}
         <div
           className={
             "flex flex-col justify-evenly items-center h-11/12 w-full gap-4 md:gap-8    p-0"
