@@ -1,6 +1,27 @@
 import React from "react";
 import Experience from "./Experience";
-import { FaReact, FaNodeJs, FaCss3Alt, FaFigma, FaJs } from "react-icons/fa"; // Icons for skills
+
+// Icon imports
+import {
+  FaReact,
+  FaNodeJs,
+  FaCss3Alt,
+  FaFigma,
+  FaJs,
+  FaHtml5,
+} from "react-icons/fa";
+import {
+  SiTailwindcss,
+  SiTypescript,
+  SiSocketdotio,
+  SiVercel,
+  SiMongodb,
+  SiExpress,
+  SiJsonwebtokens,
+  SiOpenai,
+  SiAdobexd,
+} from "react-icons/si";
+import { GiArtificialIntelligence } from "react-icons/gi";
 
 const experiences = [
   {
@@ -15,12 +36,54 @@ const experiences = [
       "Optimized database queries and improved application performance for better scalability.",
     ],
     skills: [
-      { name: "React", icon: <FaReact className="text-blue-400" /> },
-      { name: "Node.js", icon: <FaNodeJs className="text-green-500" /> },
-      { name: "Express", icon: <FaNodeJs className="text-green-500" /> },
-      { name: "MongoDB", icon: <FaNodeJs className="text-green-500" /> },
-      { name: "REST APIs", icon: <FaNodeJs className="text-green-500" /> },
-      { name: "Fintech", icon: <FaNodeJs className="text-green-500" /> },
+      {
+        name: "React",
+        logo: <FaReact />,
+        mobileLogo: <FaReact />,
+        color: "#61DBFB",
+      },
+      {
+        name: "Node.js",
+        logo: <FaNodeJs />,
+        mobileLogo: <FaNodeJs />,
+        color: "#68A063",
+      },
+      {
+        name: "Express",
+        logo: <SiExpress />,
+        mobileLogo: <SiExpress />,
+        color: "#000000",
+      },
+      {
+        name: "MongoDB",
+        logo: <SiMongodb />,
+        mobileLogo: <SiMongodb />,
+        color: "#4DB33D",
+      },
+      {
+        name: "JWT",
+        logo: <SiJsonwebtokens />,
+        mobileLogo: <SiJsonwebtokens />,
+        color: "#000000",
+      },
+      {
+        name: "REST APIs",
+        logo: <FaNodeJs />,
+        mobileLogo: <FaNodeJs />,
+        color: "#68A063",
+      },
+      {
+        name: "Fintech",
+        logo: <GiArtificialIntelligence />,
+        mobileLogo: <GiArtificialIntelligence />,
+        color: "#5B21B6",
+      },
+      {
+        name: "OpenAI",
+        logo: <SiOpenai />,
+        mobileLogo: <SiOpenai />,
+        color: "#10A37F",
+      },
     ],
   },
   {
@@ -33,10 +96,48 @@ const experiences = [
       "Conducted code reviews and contributed to team knowledge sharing.",
     ],
     skills: [
-      { name: "React", icon: <FaReact className="text-blue-400" /> },
-      { name: "Tailwind CSS", icon: <FaCss3Alt className="text-teal-400" /> },
-      { name: "REST APIs", icon: <FaNodeJs className="text-green-500" /> },
-      { name: "JavaScript", icon: <FaJs className="text-yellow-400" /> },
+      {
+        name: "HTML",
+        logo: <FaHtml5 />,
+        mobileLogo: <FaHtml5 />,
+        color: "#E34F26",
+      },
+      {
+        name: "CSS",
+        logo: <FaCss3Alt />,
+        mobileLogo: <FaCss3Alt />,
+        color: "#264de4",
+      },
+      {
+        name: "JavaScript",
+        logo: <FaJs />,
+        mobileLogo: <FaJs />,
+        color: "#F7DF1E",
+      },
+      {
+        name: "TypeScript",
+        logo: <SiTypescript />,
+        mobileLogo: <SiTypescript />,
+        color: "#3178C6",
+      },
+      {
+        name: "React",
+        logo: <FaReact />,
+        mobileLogo: <FaReact />,
+        color: "#61DBFB",
+      },
+      {
+        name: "Tailwind CSS",
+        logo: <SiTailwindcss />,
+        mobileLogo: <SiTailwindcss />,
+        color: "#38BDF8",
+      },
+      {
+        name: "Socket.IO",
+        logo: <SiSocketdotio />,
+        mobileLogo: <SiSocketdotio />,
+        color: "#010101",
+      },
     ],
   },
   {
@@ -49,12 +150,35 @@ const experiences = [
       "Ensured designs were responsive and adhered to UX best practices.",
     ],
     skills: [
-      { name: "Figma", icon: <FaFigma className="text-pink-400" /> },
-      { name: "Adobe XD", icon: <FaFigma className="text-pink-400" /> },
-      { name: "UI/UX Design", icon: <FaFigma className="text-pink-400" /> },
+      {
+        name: "Figma",
+        logo: <FaFigma />,
+        mobileLogo: <FaFigma />,
+        color: "#F24E1E",
+      },
+      {
+        name: "Adobe XD",
+        logo: <SiAdobexd />,
+        mobileLogo: <SiAdobexd />,
+        color: "#FF61F6",
+      },
+      {
+        name: "UI/UX Design",
+        logo: <FaFigma />,
+        mobileLogo: <FaFigma />,
+        color: "#F24E1E",
+      },
       {
         name: "Responsive Design",
-        icon: <FaCss3Alt className="text-teal-400" />,
+        logo: <FaCss3Alt />,
+        mobileLogo: <FaCss3Alt />,
+        color: "#264de4",
+      },
+      {
+        name: "Vercel",
+        logo: <SiVercel />,
+        mobileLogo: <SiVercel />,
+        color: "#000000",
       },
     ],
   },

@@ -7,8 +7,12 @@ import {
   SiRedux,
   SiNodedotjs,
   SiShadcnui,
-
-  // SiMysql,
+  SiMysql,
+  SiFramer,
+  SiChartdotjs,
+  SiFirebase,
+  SiSupabase,
+  SiClerk,
 } from "react-icons/si";
 
 export const skillArray = [
@@ -48,13 +52,6 @@ export const skillArray = [
     mobileLogo: <SiRedux size={"2em"} />,
     color: "#b4befe",
   },
-
-  // {
-  // 	name: "MySql",
-  // 	logo: <SiMysql size={"3em"} />,
-  // 	mobileLogo: <SiMysql size={"2em"} />,
-  // 	color: "#dd8a00"
-  // },
   {
     name: "Mongodb",
     logo: <SiMongodb size={"3em"} />,
@@ -72,6 +69,42 @@ export const skillArray = [
     logo: <SiShadcnui size={"3em"} />,
     mobileLogo: <SiShadcnui size={"2em"} />,
     color: "#c6a9b1",
+  },
+  {
+    name: "Firebase",
+    logo: <SiFirebase size="3em" />,
+    mobileLogo: <SiFirebase size="2em" />,
+    color: "#fbbf24",
+  },
+  {
+    name: "Supabase",
+    logo: <SiSupabase size="3em" />,
+    mobileLogo: <SiSupabase size="2em" />,
+    color: "#3ecf8e",
+  },
+  {
+    name: "Clerk",
+    logo: <SiClerk size="3em" />,
+    mobileLogo: <SiClerk size="2em" />,
+    color: "#ffffff",
+  },
+  {
+    name: "Framer Motion",
+    logo: <SiFramer size="3em" />,
+    mobileLogo: <SiFramer size="2em" />,
+    color: "#e879f9",
+  },
+  {
+    name: "Graph.js",
+    logo: <SiChartdotjs size="3em" />,
+    mobileLogo: <SiChartdotjs size="2em" />,
+    color: "#fdba74", // Orange shade
+  },
+  {
+    name: "MySql",
+    logo: <SiMysql size={"3em"} />,
+    mobileLogo: <SiMysql size={"2em"} />,
+    color: "#dd8a00",
   },
 ];
 

@@ -2,6 +2,7 @@ import dashboard from "src/assets/projects/dashboard( sales).png";
 import chat from "../../assets/projects/chat app.png";
 import email from "../../assets/projects/email-sequesce.png";
 import bot from "../../assets/projects/chatbot.png";
+
 export interface ProjectModel {
   name: string;
   description: string;
@@ -22,7 +23,7 @@ export const projectArray = [
   {
     name: "Email Sequence Sender – Visual Email Automation Tool",
     description:
-      "Email Sequence Sender is a React-based tool that allows users to automate email sequences through a visual drag-and-drop flow. Built with React Flow for visual email workflows and Agenda for job scheduling, it empowers users to easily create, schedule, and manage email automation.",
+      "A drag-and-drop tool to create and automate email flows. Built with React Flow, Agenda, and Node.js for managing visual workflows and scheduling emails.",
     logo: email,
     skills: [
       "JavaScript",
@@ -37,9 +38,9 @@ export const projectArray = [
     link: "https://email-sequence-app.vercel.app/",
   },
   {
-    name: "Hindi Chatbot – GPT-Powered Smart Replies Based on Your Data",
+    name: "Hindi Chatbot – GPT-Powered Smart Replies",
     description:
-      "The Hindi Chatbot is a conversational AI powered by GPT, allowing users to upload custom documents or data, and ask questions in Hindi. The bot intelligently uses the uploaded content to provide accurate and contextually relevant answers. Ideal for personalized support, document-based Q&A, and understanding Hindi content with ease. 🇮🇳🧠",
+      "A GPT-based chatbot that answers Hindi queries using uploaded documents. Useful for personalized support, Q&A, and document understanding.",
     logo: bot,
     skills: [
       "JavaScript",
@@ -50,12 +51,13 @@ export const projectArray = [
       "MongoDB",
       "Tailwind CSS",
     ],
-    link: "chat-bot-chi-one.vercel.app",
+    link: "https://chat-bot-chi-one.vercel.app",
   },
   {
-    name: "Chat App – Real-Time Messaging with GPT-Powered Assistance",
+    name: "Chat App – Real-Time Messaging with AI",
     description:
-      "This is a real-time chat application built with React, Node.js, and WebSocket for instant messaging. It also features GPT-powered smart replies for users, offering intelligent and contextual responses during chats. Whether for casual conversations or customer support, this app provides a seamless chat experience. ⚡🗨️",
+      "A full-stack real-time chat app using WebSocket and GPT for smart replies. Ideal for support or team chat with intelligent response suggestions.",
+    logo: chat,
     skills: [
       "JavaScript",
       "React",
@@ -66,15 +68,22 @@ export const projectArray = [
       "MongoDB",
       "Tailwind CSS",
     ],
-    logo: chat,
     link: "https://github.com/akhilesh-bisht/Full-stack-Chat-app",
   },
-
   {
-    name: "Inventory System",
-    description: "",
+    name: "FarmStock – Inventory & Sales PWA for Agri Businesses",
+    description:
+      "A PWA for managing inventory, sales, credits, and purchases in agriculture. Includes invoice creation, alerts, analytics, and full API integration.",
     logo: dashboard,
-    skills: ["Javascript", "Vue", "Typescript", "PHP", "MySql"],
-    // link: "https://stckrz.com/vueFrontend",
+    skills: [
+      "JavaScript",
+      "React.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Graph.js",
+      "Framer Motion",
+      "MySQL",
+    ],
+    link: "https://pos-frontend-black.vercel.app",
   },
 ];
