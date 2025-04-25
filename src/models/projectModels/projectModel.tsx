@@ -31,6 +31,7 @@ export const projectArray = [
       "React Flow",
       "Agenda",
       "Node.js",
+      "Nodemailer",
       "Express",
       "MongoDB",
       "Tailwind CSS",
@@ -54,17 +55,17 @@ export const projectArray = [
     link: "https://chat-bot-chi-one.vercel.app",
   },
   {
-    name: "Chat App – Real-Time Messaging with AI",
+    name: "Chat App – Real-Time Messaging with friends",
     description:
-      "A full-stack real-time chat app using WebSocket and GPT for smart replies. Ideal for support or team chat with intelligent response suggestions.",
+      "A full-stack real-time chat app using WebSocket . Ideal for support or team chat with intelligent response suggestions.",
     logo: chat,
     skills: [
       "JavaScript",
       "React",
       "Node.js",
+      "Zustand",
       "Express",
       "WebSocket",
-      "OpenAI GPT-3/4",
       "MongoDB",
       "Tailwind CSS",
     ],

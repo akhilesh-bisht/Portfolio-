@@ -1,77 +1,59 @@
 import { useEffect, useState } from "react";
-import { useViewport } from "src/hooks/useViewport";
 import { ProjectModel } from "src/models/projectModels/projectModel";
-import { Skill, skillArray } from "src/models/skillModels/skillmodel";
+import { motion } from "framer-motion";
 
 interface ProjectProps {
   projectObject: ProjectModel;
 }
 
 const Project: React.FC<ProjectProps> = ({ projectObject }) => {
-  const [skillsIconArray, setSkillsIconArray] = useState<Skill[]>([]);
-  const { width } = useViewport();
+  const [skillsTextArray, setSkillsTextArray] = useState<string[]>([]);
 
   useEffect(() => {
-    setSkillsIconArray(
-      projectObject.skills
-        .map((skillName) =>
-          skillArray.find((skill) => skill.name === skillName)
-        )
-        .filter((skill): skill is Skill => !!skill) // Ensures correct type inference
-    );
+    setSkillsTextArray(projectObject.skills.map((skillName) => skillName));
   }, [projectObject.skills]);
 
   return (
-    <div className="flex md:flex-row flex-col justify-between items-center w-full border-t border-gray-700 border-b py-4">
-      {/* Left Section - Project Logo */}
-      <div className="w-3/4 md:w-1/3 p-2">
-        <a
-          href={projectObject.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="max-h-20 flex items-center justify-center p-2 rounded-lg shadow-md hover:shadow-xl transition-all duration-300"
-        >
-          <img
-            className="object-cover rounded-md max-h-20"
-            src={projectObject.logo || "/default-logo.png"} // Fallback image
-            alt={projectObject.name || "Project Image"}
-          />
-        </a>
+    <motion.a
+      href={projectObject.link}
+      target="_blank"
+      rel="noopener noreferrer"
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.3 }}
+      whileHover={{ scale: 1.05 }}
+      className="w-full group cursor-pointer rounded-lg border border-[#333] bg-[#121212] hover:bg-[#1f1f1f] transition-all duration-300 p-3 flex flex-col gap-2"
+    >
+      {/* Project Logo */}
+      <div className="w-full flex justify-center mb-2">
+        <img
+          src={projectObject.logo || "/default-logo.png"}
+          alt={projectObject.name || "Project Logo"}
+          className="object-cover rounded-md max-h-16"
+        />
       </div>
 
-      {/* Right Section - Project Description & Skills */}
-      <div className="w-full md:w-2/3 flex flex-col items-start justify-center m-2">
-        <div className="text-lg text-gray-700 mb-3">
-          {projectObject.description}
-        </div>
+      {/* Project Name */}
+      <h3 className="text-sm font-medium text-white group-hover:text-blue-400 transition">
+        {projectObject.name}
+      </h3>
 
-        {/* Project Link */}
-        <div className="flex flex-col md:flex-row w-full items-start justify-between gap-1 mb-3">
-          <a
-            className="text-blue-500 hover:text-blue-700 font-medium"
-            href={projectObject.link}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {projectObject.link}
-          </a>
+      {/* Project Description */}
+      <p className="text-xs text-gray-400 mt-1 line-clamp-2">
+        {projectObject.description}
+      </p>
 
-          {/* Skills Icons */}
-          <div className="flex items-center justify-end gap-2 w-full p-0">
-            {skillsIconArray.map((skill) => (
-              <div
-                key={skill.name}
-                style={{ color: skill.color }}
-                className="text-xs p-1 hover:scale-110 transition-all duration-300"
-                title={skill.name} // Tooltip on hover to show skill name
-              >
-                {width > 800 ? <>{skill.logo}</> : <>{skill.mobileLogo}</>}
-              </div>
-            ))}
-          </div>
-        </div>
+      {/* Tech Stack as Text */}
+      <div className="text-xs text-gray-300 mt-2">
+        <span className="font-medium text-white">Tech Stack: </span>
+        {skillsTextArray.join(", ")}
       </div>
-    </div>
+
+      {/* Visit Project Link */}
+      <div className="text-xs text-blue-400 group-hover:underline mt-2">
+        Visit Project →
+      </div>
+    </motion.a>
   );
 };
 
