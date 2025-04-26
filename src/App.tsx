@@ -8,6 +8,7 @@ import { BackgroundLines } from "./components/ui/background-lines";
 import Experience from "./components/Experience/ExperienceSection";
 import { projectArray } from "./models/projectModels/projectModel";
 import Footer from "./components/footer/Footer";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             "flex flex-col justify-evenly items-center h-11/12 w-full gap-4 md:gap-8    p-0"
           }
         >
+          <Navbar />
           <div
             className={
               "flex md:flex-row gap-6 md:gap-0 flex-col h-1/3 w-full md:w-3/4 justify-between items-center"
@@ -25,7 +27,7 @@ function App() {
           >
             <div
               className={
-                "w-full md:w-1/3 h-full flex flex-col items-center justify-center"
+                "w-full mt-10 sm:mt-4 md:w-1/3 h-full flex flex-col items-center justify-center"
               }
             >
               <ProfilePicture />

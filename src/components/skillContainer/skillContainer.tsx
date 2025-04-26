@@ -19,12 +19,8 @@ const SkillContainer: React.FC = () => {
   }, []);
 
   return (
-    <div className="">
-      <h2 className="text-sm font-semibold text-white mb-4 tracking-wide">
-        Skills
-      </h2>
-
-      <div className="grid grid-cols-5 gap-2">
+    <div className="mt-0 md:mt-16">
+      <div className="grid grid-cols-3 md:grid-cols-5 gap-2">
         {skillArray.map((skill) => (
           <div
             key={skill.name}
