@@ -7,6 +7,7 @@ import ResumeContainer from "./components/resumeContainer/resumeContainer";
 import { BackgroundLines } from "./components/ui/background-lines";
 import Experience from "./components/Experience/ExperienceSection";
 import { projectArray } from "./models/projectModels/projectModel";
+import Footer from "./components/footer/Footer";
 
 function App() {
   return (
@@ -51,6 +52,7 @@ function App() {
               <Project key={project.name} projectObject={project} />
             ))}
           </div>
+          <Footer></Footer>
         </div>
       </BackgroundLines>
     </>
