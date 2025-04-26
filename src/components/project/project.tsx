@@ -22,10 +22,10 @@ const Project: React.FC<ProjectProps> = ({ projectObject }) => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
       whileHover={{ scale: 1.05 }}
-      className="w-full group cursor-pointer rounded-lg border border-[#333] bg-[#121212] hover:bg-[#1f1f1f] transition-all duration-300 p-3 flex flex-col gap-2"
+      className="w-full group cursor-pointer mt-8 rounded-lg border border-[#333] bg-[#121212] hover:bg-[#1f1f1f] transition-all duration-300 p-3 flex flex-col gap-2"
     >
       {/* Project Logo */}
-      <div className="w-full flex justify-center mb-2">
+      <div className="w-full flex  justify-center mb-2">
         <img
           src={projectObject.logo || "/default-logo.png"}
           alt={projectObject.name || "Project Logo"}

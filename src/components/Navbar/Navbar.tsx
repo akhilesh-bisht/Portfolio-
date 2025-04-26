@@ -28,14 +28,14 @@ const Navbar: React.FC = () => {
   }, []);
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-white/10 dark:bg-black/30 shadow-md transition-colors">
+    <nav
+      id="#"
+      className="fixed  top-0 left-0 w-full z-50 backdrop-blur-md bg-white/10 dark:bg-black/30 shadow-md transition-colors"
+    >
       <div className="max-w-7xl mx-auto px-6 py-2 md:py-4 flex justify-between items-center text-white">
         {/* Logo */}
         <a href="#" className="flex items-center gap-2">
-          <img width={40} src={logo} alt="Logo" />
-          <span className="text-lg font-bold tracking-wide hidden sm:block">
-            MyPortfolio
-          </span>
+          <img width={40} height={40} src={logo} alt="Logo" />
         </a>
 
         {/* Desktop Menu */}

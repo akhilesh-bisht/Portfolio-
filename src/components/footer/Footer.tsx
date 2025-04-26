@@ -3,7 +3,10 @@ import { FaEnvelope, FaWhatsapp, FaLinkedin, FaGithub } from "react-icons/fa";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="w-full py-6 mt-10 bg-zinc-900 text-zinc-300 border-t border-zinc-800">
+    <footer
+      id="connect"
+      className="w-full py-6 mt-10 bg-zinc-900 text-zinc-300 border-t border-zinc-800"
+    >
       <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
         <p className="text-sm text-center md:text-left">
           © {new Date().getFullYear()} Akhilesh Bisht. All rights reserved.

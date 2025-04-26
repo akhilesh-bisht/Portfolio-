@@ -40,7 +40,7 @@ const Experience: React.FC<ExperienceProps> = ({ experience }) => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4 }}
       viewport={{ once: true }}
-      className="w-full rounded-xl border border-gray-800 bg-gradient-to-tr from-[#1a1a1a] to-[#2a2a2a] p-6 shadow-lg transition-all hover:shadow-2xl"
+      className="w-full rounded-xl border border-gray-800 bg-gradient-to-tr from-[#1a1a1a] to-[#2a2a2a] p-4 shadow-lg transition-all hover:shadow-2xl"
     >
       {/* Header */}
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-2">

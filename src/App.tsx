@@ -9,6 +9,7 @@ import Experience from "./components/Experience/ExperienceSection";
 import { projectArray } from "./models/projectModels/projectModel";
 import Footer from "./components/footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
+import ScrollToTopButton from "./components/common/projectContainer/ScrollToTopButton";
 
 function App() {
   return (
@@ -20,6 +21,8 @@ function App() {
           }
         >
           <Navbar />
+          <ScrollToTopButton />
+
           <div
             className={
               "flex md:flex-row gap-6 md:gap-0 flex-col h-1/3 w-full md:w-3/4 justify-between items-center"
@@ -37,6 +40,7 @@ function App() {
             <SkillContainer />
           </div>
           <div
+            id="experience"
             className={
               "w-full md:w-3/4 flex flex-col items-center md:items-start"
             }
@@ -49,12 +53,12 @@ function App() {
               "w-full md:w-3/4 flex flex-col items-center md:items-start"
             }
           >
-            <div>Projects</div>
+            <div id="projects">Projects</div>
             {projectArray.map((project) => (
               <Project key={project.name} projectObject={project} />
             ))}
           </div>
-          <Footer></Footer>
+          <Footer />
         </div>
       </BackgroundLines>
     </>
