@@ -25,9 +25,68 @@ import { GiArtificialIntelligence } from "react-icons/gi";
 
 const experiences = [
   {
+    company: "VaishaliTech",
+    role: "Full Stack Developer intern",
+    duration: "May 2025 - Present",
+    description: [
+      "Worked as a Full Stack Developer intern on a laundry management web application.",
+      "Developed user-friendly interfaces for customers to schedule pickups, track orders, and manage payments using React and Tailwind CSS.",
+      "Implemented backend APIs for order processing, user authentication, and payment integration with Node.js and Express.",
+      "Designed and optimized MongoDB schemas for efficient storage of customer, order, and transaction data.",
+      "Collaborated with the team to integrate real-time order status updates and notifications.",
+      "Ensured the application was responsive, secure, and scalable to handle growing user demand.",
+    ],
+
+    skills: [
+      {
+        name: "React",
+        logo: <FaReact />,
+        mobileLogo: <FaReact />,
+        color: "#61DBFB",
+      },
+      {
+        name: "Node.js",
+        logo: <FaNodeJs />,
+        mobileLogo: <FaNodeJs />,
+        color: "#68A063",
+      },
+      {
+        name: "Express",
+        logo: <SiExpress />,
+        mobileLogo: <SiExpress />,
+        color: "#000000",
+      },
+      {
+        name: "MongoDB",
+        logo: <SiMongodb />,
+        mobileLogo: <SiMongodb />,
+        color: "#4DB33D",
+      },
+      {
+        name: "JWT",
+        logo: <SiJsonwebtokens />,
+        mobileLogo: <SiJsonwebtokens />,
+        color: "#000000",
+      },
+      {
+        name: "REST APIs",
+        logo: <FaNodeJs />,
+        mobileLogo: <FaNodeJs />,
+        color: "#68A063",
+      },
+     
+      {
+        name: "OpenAI",
+        logo: <SiOpenai />,
+        mobileLogo: <SiOpenai />,
+        color: "#10A37F",
+      },
+    ],
+  },
+  {
     company: "KisanCash",
-    role: "Frontend Developer",
-    duration: "Jan 2025 - Present",
+    role: "Frontend Developer intern",
+    duration: "Jan 2025 - April 2025",
     description: [
       "Developed and maintained features for a fintech platform aimed at providing financial solutions to farmers.",
       "Implemented backend APIs for loan management and payment processing using Node.js and Express.",
@@ -86,60 +145,7 @@ const experiences = [
       },
     ],
   },
-  {
-    company: "Mentornix Consult Pvt Ltd",
-    role: "Frontend Dev Intern",
-    duration: "Aug 2024 - Jan 2025",
-    description: [
-      "Built responsive and user-friendly interfaces using React and Tailwind CSS.",
-      "Integrated RESTful APIs for seamless data exchange.",
-      "Conducted code reviews and contributed to team knowledge sharing.",
-    ],
-    skills: [
-      {
-        name: "HTML",
-        logo: <FaHtml5 />,
-        mobileLogo: <FaHtml5 />,
-        color: "#E34F26",
-      },
-      {
-        name: "CSS",
-        logo: <FaCss3Alt />,
-        mobileLogo: <FaCss3Alt />,
-        color: "#264de4",
-      },
-      {
-        name: "JavaScript",
-        logo: <FaJs />,
-        mobileLogo: <FaJs />,
-        color: "#F7DF1E",
-      },
-      {
-        name: "TypeScript",
-        logo: <SiTypescript />,
-        mobileLogo: <SiTypescript />,
-        color: "#3178C6",
-      },
-      {
-        name: "React",
-        logo: <FaReact />,
-        mobileLogo: <FaReact />,
-        color: "#61DBFB",
-      },
-      {
-        name: "Tailwind CSS",
-        logo: <SiTailwindcss />,
-        mobileLogo: <SiTailwindcss />,
-        color: "#38BDF8",
-      },
-      {
-        name: "Socket.IO",
-        logo: <SiSocketdotio />,
-        mobileLogo: <SiSocketdotio />,
-        color: "#010101",
-      },
-    ],
-  },
+ 
   {
     company: "Internship Studio",
     role: "Web Designer Intern",
