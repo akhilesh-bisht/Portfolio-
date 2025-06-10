@@ -7,13 +7,10 @@ import {
   FaNodeJs,
   FaCss3Alt,
   FaFigma,
-  FaJs,
-  FaHtml5,
 } from "react-icons/fa";
 import {
   SiTailwindcss,
-  SiTypescript,
-  SiSocketdotio,
+ 
   SiVercel,
   SiMongodb,
   SiExpress,
@@ -66,6 +63,12 @@ const experiences = [
         name: "JWT",
         logo: <SiJsonwebtokens />,
         mobileLogo: <SiJsonwebtokens />,
+        color: "#000000",
+      },
+        {
+        name: "Tailwind CSS",
+        logo: <SiTailwindcss />,
+        mobileLogo: <SiTailwindcss />,
         color: "#000000",
       },
       {
