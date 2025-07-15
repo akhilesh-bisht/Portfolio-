@@ -26,7 +26,7 @@ const experiences = [
     role: "Full Stack Developer intern",
     duration: "May 2025 - Present",
     description: [
-      "Worked as a Full Stack Developer intern on a laundry management web application.",
+      "Worked as a Full Stack Developer intern on a laundry management , Blog , landing page  web application.",
       "Developed user-friendly interfaces for customers to schedule pickups, track orders, and manage payments using React and Tailwind CSS.",
       "Implemented backend APIs for order processing, user authentication, and payment integration with Node.js and Express.",
       "Designed and optimized MongoDB schemas for efficient storage of customer, order, and transaction data.",
