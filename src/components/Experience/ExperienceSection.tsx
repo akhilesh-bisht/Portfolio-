@@ -7,6 +7,7 @@ import {
   FaNodeJs,
   FaCss3Alt,
   FaFigma,
+  
 } from "react-icons/fa";
 import {
   SiTailwindcss,
